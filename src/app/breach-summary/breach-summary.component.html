@@ -1,0 +1,79 @@
+
+<div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white px-4 py-8 pb-32 relative overflow-hidden">
+  <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20 z-0" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="cyberGradient" x1="0" y1="0" x2="1440" y2="900" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00fff0" />
+        <stop offset="1" stop-color="#7f00ff" />
+      </linearGradient>
+    </defs>
+    <g>
+      <rect x="0" y="0" width="1440" height="900" fill="url(#cyberGradient)" opacity="0.08" />
+      <g stroke="url(#cyberGradient)" stroke-width="1">
+        <path d="M0 100 L1440 800" />
+        <path d="M0 800 L1440 100" />
+        <path d="M720 0 L720 900" />
+        <path d="M0 450 L1440 450" />
+        <circle cx="720" cy="450" r="300" fill="none" />
+      </g>
+    </g>
+  </svg>
+  <img src="https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?q=1980&w=3880" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
+  <div class="w-full max-w-6xl text-center animate-fade-in-up relative z-10 mx-auto px-2">
+  <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg break-words text-balance">
+      <ng-container *ngIf="summary">
+        {{ summary.breached ? 'Your data has been breached in ' + summary.breach_count + ' place' + (summary.breach_count > 1 ? 's' : '') + '.' : 'No breaches found for your email!' }}
+      </ng-container>
+    </h2>
+    <ng-container *ngIf="summary && summary.breached">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 w-full">
+        <ng-container *ngFor="let row of sortedBreaches">
+          <ng-container *ngFor="let breach of row">
+            <div class="p-5 rounded-xl shadow-lg bg-gray-900 bg-opacity-80 border border-gray-700 flex flex-col transition-transform duration-300 hover:scale-105 w-full relative text-left">
+              <div class="flex items-start justify-between mb-2">
+                <span class="font-bold text-xl bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent drop-shadow" style="border-radius: 6px;">
+                {{ breach.site }}
+                </span>
+                <span class="absolute right-6 top-6">
+                  <span class="px-3 py-1 rounded-md text-xs font-bold border"
+                    [ngClass]="{
+                      'bg-pink-900 border-pink-400 text-pink-300': breach.criticality === 'Critical',
+                      'bg-yellow-900 border-yellow-400 text-yellow-300': breach.criticality === 'Moderate',
+                      'bg-cyan-900 border-cyan-400 text-cyan-300': breach.criticality === 'Low'
+                    }">
+                    {{ breach.criticality }}
+                  </span>
+                </span>
+              </div>
+              <div class="text-xs text-gray-500 mb-1">{{ breach.date }}</div>
+              <div class="text-gray-300 text-sm mb-4">{{ breach.description }}</div>
+              <div class="flex flex-wrap gap-2 mb-2">
+                <span *ngFor="let src of breach.sources" class="px-2 py-1 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-xs font-semibold text-white shadow">
+                  {{ src }}
+                </span>
+              </div>
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="mb-8 text-left">
+        <div class="rounded-xl p-8 bg-gray-800 bg-opacity-80 shadow-lg max-w-2xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4" style="color: #00ff90;">What to do</h3>
+          <ul class="list-disc list-inside mb-8 space-y-2">
+            <li class="text-base text-green-200"><span class="font-semibold">Change passwords</span> immediately on affected services and any reused elsewhere.</li>
+            <li class="text-base text-green-200">Enable <span class="font-semibold">multi-factor authentication (MFA)</span> on all accounts.</li>
+            <li class="text-base text-green-200">Monitor accounts for <span class="font-semibold">suspicious activity</span> or unauthorized access.</li>
+            <li class="text-base text-green-200">Be cautious of <span class="font-semibold">phishing attempts</span> and verify sender authenticity.</li>
+          </ul>
+          <h3 class="text-2xl font-bold mb-4 mt-6" style="color: #ff3f3f;">What not to do</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li class="text-base text-red-200">Do <span class="font-semibold">not reuse passwords</span> across multiple sites.</li>
+            <li class="text-base text-red-200">Do <span class="font-semibold">not ignore notifications</span> about breaches affecting your accounts.</li>
+            <li class="text-base text-red-200">Do <span class="font-semibold">not click on suspicious links</span> or download attachments from unknown sources.</li>
+            <li class="text-base text-red-200">Do <span class="font-semibold">not share passwords or sensitive information</span> via email or messaging apps.</li>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
