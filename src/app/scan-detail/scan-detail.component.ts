@@ -10,7 +10,7 @@ import { API_BASE_URL } from '../app.config';
   templateUrl: './scan-detail.component.html',
   styleUrls: ['./scan-detail.component.css'],
   standalone: true,
-  imports: [DatePipe, JsonPipe, NgIf, BreachSummaryComponent]
+  imports: [DatePipe, NgIf, BreachSummaryComponent]
 })
 export class ScanDetailComponent implements OnInit {
   scan: any = null;

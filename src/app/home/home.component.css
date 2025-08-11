@@ -1,1 +1,17 @@
-/* You can add homepage-specific styles here if needed */
+
+/* Remove disco/neon effects and use formal theme */
+.formal-title {
+	color: #093aad;
+	font-weight: 700;
+}
+.formal-section {
+	background: #0d0e10;
+	border: 1px solid #e0e0e0;
+	border-radius: 1rem;
+	box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+	color: #1a202c;
+}
+.formal-highlight {
+	color: #1ea1f3;
+	font-weight: 600;
+}

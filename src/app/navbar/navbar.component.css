@@ -2,3 +2,7 @@
   font-family: 'Orbitron', 'Audiowide', 'Share Tech Mono', 'monospace', 'sans-serif';
   letter-spacing: 0.15em;
 }
+
+nav {
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+}

@@ -18,19 +18,19 @@
       </g>
     </g>
   </svg>
-  <img src="https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?q=1980&w=3880" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
+  <img src="/bg-image.jpg" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
   <div class="w-full max-w-4xl text-center animate-fade-in-up relative z-10">
-    <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg">Scan Details</h2>
-    <div *ngIf="loading" class="text-lg text-cyan-300 animate-pulse mb-6">Loading scan details...</div>
+    <h2 class="text-4xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg">Scan Details</h2>
+    <div *ngIf="loading" class="text-lg text-blue-400 animate-pulse mb-6">Loading scan details...</div>
     <div *ngIf="error" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-3 rounded-lg shadow-lg mb-6 font-semibold animate-fade-in">{{ error }}</div>
     <div *ngIf="!loading && !error && scan">
   <div class="bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg border border-gray-700 mb-8 w-full md:w-[44rem] lg:w-[56rem] mx-auto">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
-          <div class="text-lg font-bold text-cyan-400">{{ scan.email }}</div>
-          <div class="text-sm text-gray-400">{{ scan.timestamp | date:'medium' }}</div>
+          <div class="text-lg font-bold text-blue-500">{{ scan.email }}</div>
+          <div class="text-sm text-gray-300">{{ scan.timestamp | date:'medium' }}</div>
         </div>
         <div *ngIf="scan.genai_summary">
-          <h3 class="text-xl font-bold text-pink-300 mb-2">GenAI Summary</h3>
+          <h3 class="text-xl font-bold text-blue-400 mb-2">GenAI Summary</h3>
           <app-breach-summary [summary]="scan.genai_summary"></app-breach-summary>
         </div>
       </div>

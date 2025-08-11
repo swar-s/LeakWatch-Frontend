@@ -17,21 +17,21 @@
       </g>
     </g>
   </svg>
-  <img src="https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?q=1980&w=3880" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
+  <img src="/bg-image.jpg" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
   <div class="w-full max-w-2xl text-center animate-fade-in-up relative z-10">
-    <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg">My Scans</h2>
+    <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-400 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg">My Scans</h2>
     <div *ngIf="loading" class="text-lg text-cyan-300 animate-pulse mb-6">Loading scans...</div>
     <div *ngIf="error" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-3 rounded-lg shadow-lg mb-6 font-semibold animate-fade-in">{{ error }}</div>
     <div *ngIf="!loading && !error">
       <ul *ngIf="scans.length > 0; else noScans" class="space-y-6">
         <li *ngFor="let scan of scans" (click)="openScan(scan)" class="cursor-pointer bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg border border-gray-700 transition-transform duration-300 hover:scale-105 hover:border-cyan-400 group">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <div class="text-lg font-bold text-cyan-400 group-hover:text-pink-400">{{ scan.email }}</div>
-            <div class="text-sm text-gray-400">{{ scan.timestamp | date:'medium' }}</div>
+            <div class="text-lg font-bold text-blue-400 group-hover:text-cyan-400">{{ scan.email }}</div>
+            <div class="text-sm text-gray-300">{{ scan.timestamp | date:'medium' }}</div>
           </div>
           <div class="mt-2">
             <span class="inline-block px-3 py-1 rounded-full text-sm font-semibold"
-              [ngClass]="scan.genai_summary?.breached ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow' : 'bg-gradient-to-r from-cyan-500 to-green-400 text-white shadow'">
+              [ngClass]="scan.genai_summary?.breached ? 'bg-gradient-to-r from-purple-800 to-blue-800 text-white shadow' : 'bg-gradient-to-r from-cyan-600 to-green-500 text-white shadow'">
               {{ scan.genai_summary?.breached ? 'Breached' : 'No Breach' }}
             </span>
           </div>

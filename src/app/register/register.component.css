@@ -1,23 +1,22 @@
-/* Custom cyberpunk register styles to match homepage and login */
+/* Custom cyberpunk login styles to match homepage */
 .min-h-screen { min-height: 100vh; }
 .bg-gradient-to-br {
-  background: linear-gradient(135deg, #111827 0%, #000 60%, #312e81 100%);
+	background: linear-gradient(135deg, #111827 0%, #000 60%, #060809 100%);
 }
 .font-logo {
-  font-family: 'Orbitron', 'Audiowide', 'Share Tech Mono', 'monospace', 'sans-serif';
+	font-family: 'Orbitron', 'Audiowide', 'Share Tech Mono', 'monospace', 'sans-serif';
 }
 .rounded-2xl { border-radius: 1rem; }
 .shadow-xl { box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37); }
 .backdrop-blur-md {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 }
 .border-gray-700 { border-color: #374151; }
 .bg-gray-900\/70 { background-color: rgba(17,24,39,0.7); }
 .bg-gray-800\/80 { background-color: rgba(31,41,55,0.8); }
-.text-cyan-300 { color: #67e8f9; }
-.text-purple-300 { color: #c4b5fd; }
-.text-pink-300 { color: #f9a8d4; }
+.text-cyan-300 { color: #3697ff; }
+.text-pink-300 { color: #3697ff; }
 .text-red-400 { color: #f87171; }
 .text-center { text-align: center; }
 .font-extrabold { font-weight: 800; }
@@ -25,28 +24,27 @@
 .tracking-wider { letter-spacing: 0.08em; }
 .tracking-widest { letter-spacing: 0.15em; }
 .bg-gradient-to-r {
-  background: linear-gradient(90deg, #06b6d4 0%, #a21caf 60%, #ec4899 100%);
+	background: linear-gradient(90deg, #000000 0%, #000000 60%, #000000 100%);
 }
 .bg-clip-text {
-  -webkit-background-clip: text;
-  background-clip: text;
+	-webkit-background-clip: text;
+	background-clip: text;
 }
 .text-transparent { color: transparent; }
 .drop-shadow-lg {
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+	filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
 }
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+	animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+	from { opacity: 0; transform: translateY(40px); }
+	to { opacity: 1; transform: translateY(0); }
 }
 .placeholder-gray-400::placeholder { color: #9ca3af; }
 .focus\:ring-2:focus { box-shadow: 0 0 0 2px #06b6d4; }
 .focus\:ring-cyan-400:focus { box-shadow: 0 0 0 2px #06b6d4; }
-.focus\:ring-purple-400:focus { box-shadow: 0 0 0 2px #a21caf; }
-.focus\:ring-pink-400:focus { box-shadow: 0 0 0 2px #ec4899; }
+.focus\:ring-pink-400:focus { box-shadow: 0 0 0 2px #06b6d4; }
 .transition { transition: all 0.2s; }
 .disabled\:opacity-60:disabled { opacity: 0.6; }
 .disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
@@ -71,15 +69,15 @@
 .border { border-width: 1px; }
 .text-white { color: #fff; }
 .bg-gradient-to-r {
-  background: linear-gradient(90deg, #06b6d4 0%, #a21caf 60%, #ec4899 100%);
+	background: linear-gradient(90deg, #54a2ef 0%, #3d8ff4 60%, #2faece 100%);
 }
-.hover\:from-pink-500:hover { background: linear-gradient(90deg, #ec4899 0%, #06b6d4 100%); }
-.hover\:to-cyan-400:hover { background: linear-gradient(90deg, #ec4899 0%, #06b6d4 100%); }
+.hover\:from-pink-500:hover { background: linear-gradient(90deg, #3899da 0%, #06b6d4 100%); }
+.hover\:to-cyan-400:hover { background: linear-gradient(90deg, #4a9feb 0%, #06b6d4 100%); }
 .shadow-lg { box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25); }
 .transition-all { transition: all 0.3s; }
 .duration-300 { transition-duration: 300ms; }
 .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.5; }
 }

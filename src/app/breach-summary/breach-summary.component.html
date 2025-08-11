@@ -18,9 +18,9 @@
       </g>
     </g>
   </svg>
-  <img src="https://images.unsplash.com/photo-1573767291321-c0af2eaf5266?q=1980&w=3880" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
+  <img src="/bg-image.jpg" alt="cyber matrix code background" class="absolute inset-0 w-full h-full object-cover opacity-15 z-0" loading="lazy" />
   <div class="w-full max-w-6xl text-center animate-fade-in-up relative z-10 mx-auto px-2">
-  <h2 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg break-words text-balance">
+  <h2 class="text-4xl font-extrabold bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 bg-clip-text text-transparent mb-8 mt-8 tracking-tight drop-shadow-lg break-words text-balance">
       <ng-container *ngIf="summary">
         {{ summary.breached ? 'Your data has been breached in ' + summary.breach_count + ' place' + (summary.breach_count > 1 ? 's' : '') + '.' : 'No breaches found for your email!' }}
       </ng-container>
@@ -31,7 +31,7 @@
           <ng-container *ngFor="let breach of row">
             <div class="p-5 rounded-xl shadow-lg bg-gray-900 bg-opacity-80 border border-gray-700 flex flex-col transition-transform duration-300 hover:scale-105 w-full relative text-left">
               <div class="flex items-start justify-between mb-2">
-                <span class="font-bold text-xl bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent drop-shadow" style="border-radius: 6px;">
+                <span class="font-bold text-xl bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent drop-shadow" style="border-radius: 6px;">
                 {{ breach.site }}
                 </span>
                 <span class="absolute right-6 top-6">
@@ -48,7 +48,7 @@
               <div class="text-xs text-gray-500 mb-1">{{ breach.date }}</div>
               <div class="text-gray-300 text-sm mb-4">{{ breach.description }}</div>
               <div class="flex flex-wrap gap-2 mb-2">
-                <span *ngFor="let src of breach.sources" class="px-2 py-1 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 text-xs font-semibold text-white shadow">
+                <span *ngFor="let src of breach.sources" class="px-2 py-1 rounded-full bg-gradient-to-r from-blue-800 to-blue-600 text-xs font-semibold text-white shadow">
                   {{ src }}
                 </span>
               </div>

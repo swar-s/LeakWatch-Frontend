@@ -1,7 +1,7 @@
-<nav class="w-full flex items-center justify-between px-8 py-4 bg-transparent absolute top-0 left-0 z-30">
+<nav class="w-full flex items-center justify-between px-5 py-4 bg-transparent shadow-sm fixed top-0 left-0 z-30 backdrop-blur">
   <div class="flex items-center">
     <a routerLink="/" href="/">
-    <span class="text-3xl md:text-4xl font-extrabold tracking-widest bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg font-logo select-none" style="font-family: 'Orbitron', 'Audiowide', 'Share Tech Mono', 'monospace', 'sans-serif'; letter-spacing: 0.15em;">
+    <span class="text-3xl md:text-4xl font-extrabold tracking-widest text-blue-500 font-logo select-none" style="font-family: 'Orbitron', 'Audiowide', 'Share Tech Mono', 'monospace', 'sans-serif'; letter-spacing: 0.15em;">
       LeakWatch
     </span>
     </a>
@@ -9,20 +9,20 @@
   <div>
     <div *ngIf="userName; else loginBtn">
       <div class="relative inline-block text-left">
-        <button (click)="toggleDropdown()" class="px-6 py-2 cursor-pointer bg-gradient-to-r from-cyan-600 to-purple-700 hover:from-pink-500 hover:to-cyan-500 text-white font-semibold rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50">
+        <button (click)="toggleDropdown()" class="px-6 py-2 cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300">
           {{ userName }}
         </button>
-        <div *ngIf="dropdownOpen" class="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-gray-900 ring-1 ring-black ring-opacity-5 z-50">
+        <div *ngIf="dropdownOpen" class="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
           <div class="py-1">
-            <a routerLink="/my-scans" href="/my-scans" class="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-800 hover:text-cyan-400 transition cursor-pointer">My Scans</a>
-            <button (click)="logout()" class="block w-full text-left px-4 py-2 text-sm text-gray-200 hover:bg-gray-800 hover:text-pink-400 transition">Logout</button>
+            <a routerLink="/my-scans" href="/my-scans" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition cursor-pointer">My Scans</a>
+            <button (click)="logout()" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition">Logout</button>
           </div>
         </div>
       </div>
     </div>
     <ng-template #loginBtn>
       <a routerLink="/login" href="/login">
-        <button class="px-6 py-2 cursor-pointer bg-gradient-to-r from-cyan-600 to-purple-700 hover:from-pink-500 hover:to-cyan-500 text-white font-semibold rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50">
+        <button class="px-6 py-2 cursor-pointer bg-blue-600 hover:bg-blue-400 text-white font-semibold rounded-full shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300">
           Login
         </button>
       </a>

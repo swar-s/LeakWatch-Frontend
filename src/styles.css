@@ -1,2 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+
+/* Formal, trustworthy theme overrides */
+
+body, html {
+	background: #e9ecef;
+	color: #1a202c;
+}
+
+.formal-bg {
+	background: linear-gradient(135deg, #e9ecef 0%, #cfd8dc 100%);
+}
+
+/* Subtle background image overlay for trust */
+.formal-bg::before {
+	content: '';
+	position: fixed;
+	top: 0; left: 0; width: 100vw; height: 100vh;
+	background: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+	opacity: 0.08;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.formal-bg {
+	background: linear-gradient(135deg, #000000 0%, #000000 100%);
+}
+
+.formal-card {
+	background: #0b0d0f;
+	border: 1px solid #bbdaed;
+	box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+}
+
+.formal-primary {
+	color: #417dff;
+}
+
+.formal-secondary {
+	color: #d0dded;
+}
+
+.formal-accent {
+	color: #1ea1f3;
+}
+
+.formal-btn {
+	background: linear-gradient(90deg, #2563eb 0%, #0ea5e9 100%);
+	color: #fff;
+	border-radius: 9999px;
+	font-weight: 600;
+	box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+	transition: background 0.2s;
+}
+.formal-btn:hover {
+	background: linear-gradient(90deg, #0ea5e9 0%, #2563eb 100%);
+}
